@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --app-bg-primary: #1e1e1e;
+  --app-bg-secondary: #252526;
+  --app-bg-tertiary: #2d2d2d;
+  --app-bg-hover: #3c3c3c;
+  --app-text-primary: #cccccc;
+  --app-text-secondary: #9d9d9d;
+  --app-text-muted: #6b6b6b;
+  --app-border: #3c3c3c;
+  --app-accent: #0078d4;
+  --app-accent-hover: #1a8fe8;
+  --app-success: #4caf50;
+  --app-warning: #ff9800;
+  --app-error: #f44336;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--app-bg-primary);
+  color: var(--app-text-primary);
+  overflow: hidden;
+}
+
+.app-drag {
+  -webkit-app-region: drag;
+}
+
+.app-no-drag {
+  -webkit-app-region: no-drag;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--app-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--app-bg-hover);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--app-text-muted);
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 2px solid var(--app-accent);
+  outline-offset: -2px;
+}
+
+::selection {
+  background-color: var(--app-accent);
+  color: white;
+}
