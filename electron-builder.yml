@@ -1,0 +1,23 @@
+appId: com.snippet-manager.app
+productName: Snippet Manager
+directories:
+  output: release
+files:
+  - dist/**/*
+  - package.json
+mac:
+  category: public.app-category.developer-tools
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+        - ia32
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
